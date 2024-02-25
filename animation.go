@@ -1,4 +1,4 @@
-package ganimator
+package gonimator
 
 // Animation sticks a collection of parts together.
 type Animation struct {

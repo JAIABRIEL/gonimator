@@ -1,4 +1,4 @@
-package ganimator
+package gonimator
 
 // PartPlayer counts to a parts duration.
 // After the duration is reached it just resets itself.
