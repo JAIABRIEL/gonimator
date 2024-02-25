@@ -2,8 +2,7 @@ package gonimator
 
 // AnimationPlayer plays each of its parts for the parts duration.
 type AnimationPlayer struct {
-	parts     []*PartPlayer
-	animation *Animation
+	parts []*PartPlayer
 
 	current int
 }
