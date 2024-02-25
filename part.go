@@ -1,4 +1,4 @@
-package ganimator
+package gonimator
 
 // Part represents a single image of an animation.
 type Part struct {
