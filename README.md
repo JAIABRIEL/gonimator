@@ -10,6 +10,12 @@ Tested on hundreds of entities with a single `AnimationPlayer` for each of them 
 it should be pretty solid.
 
 
+## Will be implemented soon
+
+* Implement a manager to switch between different animations or define for example `Idle` animations
+* Use generics for Parts.Value
+
+
 ## Usage
 
 ```go
