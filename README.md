@@ -1,4 +1,4 @@
-# gonimate
+# gonimator
 
 Simple animation util library written in Go.
 Define animations in your project and store them for example in your
