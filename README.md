@@ -13,7 +13,6 @@ it should be pretty solid.
 ## Will be implemented soon
 
 * Implement a manager to switch between different animations or define for example `Idle` animations
-* Use generics for Parts.Value
 
 
 ## Usage
@@ -24,8 +23,8 @@ package main
 import "github.com/JAIABRIEL/gonimator"
 
 // Define your animations
-var myAnimation1 *gonimator.Animation = &gonimator.Animation{
-	Parts: []*gonimator.Part{
+var myAnimation1 *gonimator.Animation[int] = &gonimator.Animation[int]{
+	Parts: []*gonimator.Part[int]{
 		{Value: 1, Duration: 20},
 		{Value: 2, Duration: 20},
 		{Value: 3, Duration: 20},
