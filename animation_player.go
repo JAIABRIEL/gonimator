@@ -1,8 +1,8 @@
 package gonimator
 
 // AnimationPlayer plays each of its parts for the parts duration.
-type AnimationPlayer struct {
-	parts []*PartPlayer
+type AnimationPlayer[T any] struct {
+	parts []*PartPlayer[T]
 
 	current int
 }
@@ -10,7 +10,7 @@ type AnimationPlayer struct {
 // Update increases the current parts state by one tick.
 // Returns false if all parts reached their end.
 // It's a loop so just update it again to restart.
-func (ap *AnimationPlayer) Update() bool {
+func (ap *AnimationPlayer[T]) Update() bool {
 	if ap.parts[ap.current].Update() {
 		return true
 	}
@@ -20,12 +20,12 @@ func (ap *AnimationPlayer) Update() bool {
 }
 
 // Get returns the current parts value.
-func (ap *AnimationPlayer) Get() int {
+func (ap *AnimationPlayer[T]) Get() T {
 	return ap.parts[ap.current].Get()
 }
 
 // Cancel resets the animation.
-func (ap *AnimationPlayer) Cancel() {
+func (ap *AnimationPlayer[T]) Cancel() {
 	// if used correctly, every part that is not the current one
 	// should be at 0.
 	ap.parts[ap.current].Cancel()

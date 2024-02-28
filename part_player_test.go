@@ -27,8 +27,8 @@ func TestPartPlayer(t *testing.T) {
 	}
 }
 
-func NewPart(duration gonimator.TickDuration, value int) *gonimator.Part {
-	return &gonimator.Part{
+func NewPart(duration gonimator.TickDuration, value int) *gonimator.Part[int] {
+	return &gonimator.Part[int]{
 		Duration: duration,
 		Value:    value,
 	}

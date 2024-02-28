@@ -9,8 +9,8 @@ import (
 
 func TestAnimationPlayer(t *testing.T) {
 	partAmount := rand.Intn(100) + 1
-	a := &gonimator.Animation{
-		Parts: make([]*gonimator.Part, partAmount),
+	a := &gonimator.Animation[int]{
+		Parts: make([]*gonimator.Part[int], partAmount),
 	}
 
 	totalDuration := 0
